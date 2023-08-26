@@ -275,7 +275,6 @@ a.navbar-brand {
 .card-item .price-produto {
     color: var(--color-primary);
     font-size: 24px;
-
 }
 
 .card-item .add-carrinho {
@@ -338,7 +337,7 @@ a.navbar-brand {
 }
 
 .card-item:hover .price-produto {
-    color: var(--color-black-heavy) !important;
+    color: var(--color-black-heavy)!important;
     margin-top: 20px;
 }
 
@@ -533,7 +532,7 @@ footer {
     height: 35px;
     background-color: var(--color-white);
     border-radius: 50px;
-    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
     color: var(--color-black);
     display: flex;
     justify-content: center;
@@ -554,7 +553,8 @@ footer {
     content: none;
 }
 
-.etapa.active, .etapa.active::before {
+.etapa.active,
+.etapa.active::before {
     background-color: var(--color-primary);
 }
 
@@ -642,16 +642,16 @@ footer {
 
 .form-control {
     background-color: var(--color-white);
-    color: var(--color-black)!important;
+    color: var(--color-black) !important;
     border-radius: 20px;
     padding: 15px 25px;
     font-size: 20px;
-    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
-    border: none!important;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border: none !important;
 }
 
 select.form-control {
-    height: 60px!important;
+    height: 60px !important;
 }
 
 .container-cep .form-control {
@@ -664,3 +664,54 @@ select.form-control {
     top: 38px;
 }
 
+.img-produto-resumo img {
+    width: 50px;
+    border-radius: 11px;
+}
+
+.item-carrinho.resumo {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.title-produto-resumo {
+    color: var(--color-black);
+    font-size: 18px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
+.price-produto-resumo {
+    color: var(--color-primary);
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+.quantidade-produto-resumo {
+    font-variant: var(--color-black);
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+.img-map {
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-secondary);
+    color: var(--color-black);
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 11px;
+}
+
+.texto-endereco {
+    margin-bottom: 0;
+    color: var(--color-black);
+}
+
+.cidade-endereco {
+    margin-bottom: 0;
+}
