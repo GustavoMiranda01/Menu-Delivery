@@ -14,16 +14,20 @@ cardapio.metodos = {
 
     // obtem a lista de itens do cardapio.
 
-    obterItensCardapios: () => {
+    obterItensCardapios: (categoria = 'burgers') => {
 
-        var filtro = MENU['burgers'];
+        var filtro = MENU[categoria];
+        console.log(filtro);
         
+        $("#itensCardapio").html('')
 
         $.each(filtro, (i, e) => {
 
             let temp = cardapio.templates.item.replace(/\${img}/g, e.img)
+            .replace(/\${name}/g, e.name)
+            .replace(/\${price}/g, e.price.toFixed(2).replace('.', ','))
 
-            $('#itensCardapio').append(temp)
+            $("#itensCardapio").append(temp)
 
         })
     }
@@ -40,10 +44,10 @@ cardapio.templates = {
                     <img src="\${img}">
                 </div>
                 <p class="title-produto text-center mt-4">
-                    <b>Nome do produto</b>
+                    <b>\${name}</b>
                 </p>
                 <p class="price-produto text-center">
-                    <b>R$ 154,90</b>
+                    <b>R$ \${price}</b>
                 </p>
                 <div class="add-carrinho">
                     <span class="btn-menos"><i class="fas fa-minus"></i></span>
