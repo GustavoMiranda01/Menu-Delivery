@@ -124,6 +124,25 @@ cardapio.metodos = {
             }
 
         }
+    },
+
+    // atualiza o badge de totais dos botões  "Meu carrinho"
+    atualizarbadgeTotal: () => {
+
+        var total = 0;
+
+        $.each(MEU_CARRINHO, (i, e) => {
+            total += e.qntd
+        })
+
+        if (total > 0) {
+            $(".botão-carrinho").removeClass('hidden');
+            $(".container-total-carrinho").removeClass('hidden')
+        }
+        else {
+            $(".botão-carrinho").addClass('hidden');
+            $(".container-total-carrinho").addClass('hidden')
+        }
     }
 
 }
