@@ -8,12 +8,17 @@
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/fontawesome.css">
     <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/animate.css">
     <link rel="shortcut icon" href="./assets/img/menu-delirery-favicoin.png" type="image/x-icon">
 </head>
 
 <body>
 
-    <a class="botão-carrinho hidden">
+    <div class="container-mensagem" id="container-mensagem">
+
+    </div>
+
+    <a class="botao-carrinho hidden" onclick="cardapio.metodos.abrirCarrinho(true)">
         <div class="badge-total-carrinho">0</div>
         <i class="fa fa-shopping-bag"></i>
     </a>
@@ -44,9 +49,9 @@
                             <a href="#depoimentos" class="nav-link"><b>Depoimentos</b></a>
                         </li>
                     </ul>
-                    <a class="btn btn-white bnt-icon">
+                    <a class="btn btn-white bnt-icon" onclick="cardapio.metodos.abrirCarrinho(true)">
                         Meu carrinho <span class="icon">
-                            <div class="container-total-carrinho badge-total-carrinho-top hidden">0</div>
+                            <div class="container-total-carrinho badge-total-carrinho top hidden">0</div>
                             <i class="fa fa-shopping-bag"></i>
                         </span>
                     </a>
@@ -407,7 +412,7 @@
 
         <div class="m-header">
             <div class="container">
-                <a class="btn btn-white btn-sm float-right">
+                <a class="btn btn-white btn-sm float-right" onclick="cardapio.metodos.abrirCarrinho(false)">
                     Fechar
                 </a>
                 <div class="etapas">

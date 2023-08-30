@@ -117,13 +117,15 @@ cardapio.metodos = {
                     MEU_CARRINHO.push(item[0])
                 }
 
-                alert('Item adicionado ao carrinho')
+                cardapio.metodos.mensagem('Item adicionado ao carrinho', 'green')
                 $("#qntd-" + id).text(0);
 
+                cardapio.metodos.atualizarbadgeTotal();
 
             }
 
         }
+
     },
 
     // atualiza o badge de totais dos botões  "Meu carrinho"
@@ -136,13 +138,52 @@ cardapio.metodos = {
         })
 
         if (total > 0) {
-            $(".botão-carrinho").removeClass('hidden');
-            $(".container-total-carrinho").removeClass('hidden')
+            $(".botao-carrinho").removeClass('hidden');
+            $(".container-total-carrinho").removeClass('hidden');
         }
         else {
-            $(".botão-carrinho").addClass('hidden');
-            $(".container-total-carrinho").addClass('hidden')
+            $(".botao-carrinho").addClass('hidden')
+            $(".container-total-carrinho").addClass('hidden');
         }
+
+        $(".badge-total-carrinho").html(total);
+
+    },
+
+    // abrir a modal de carrinho
+    abrirCarrinho: (abrir) => {
+        if (abrir) {
+            $("#modalCarrinho").removeClass('hidden');
+        }
+        else {
+            $("#modalCarrinho").addClass('hidden');
+        }
+        
+    },
+
+
+
+
+
+
+    // Mensagens
+    mensagem: (texto, cor = 'red', tempo = 3500) => {
+
+        let id = Math.floor(Date.now() * Math.random()).toString();
+
+        let msg = `<div id="msg-${id}" class="animated fadeInDown toast ${cor}">${texto}</div>`;
+
+        $("#container-mensagem").append(msg);
+
+        setTimeout(() => {
+            $("#msg-" + id).removeClass('fadeInDown');
+            $("#msg-" + id).addClass('fadeOutUp');
+            setTimeout(() => {
+                $("#msg-" + id).remove();
+            }, 800);
+        }, tempo)
+
+
     }
 
 }

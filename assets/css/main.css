@@ -17,7 +17,7 @@
     --color-primary: #ffbf00;
     --color-secondary: #fff2cc;
     --color-white: #ffffff;
-    --color-read: #e74c3c;
+    --color-red: #e74c3c;
     --color-green: #2ecc71;
     --color-separate: #cccccc;
 
@@ -611,12 +611,12 @@ footer {
 }
 
 .btn-remove {
-    border: 2px solid var(--color-read);
+    border: 2px solid var(--color-red);
     font-size: 16px;
     padding: 4px 10px;
     border-radius: 10px;
     color: var(--color-white);
-    background-color: var(--color-read);
+    background-color: var(--color-red);
     margin-left: 15px;
 }
 
@@ -716,19 +716,9 @@ select.form-control {
     margin-bottom: 0;
 }
 
-.badge-total-carrinho-top {
-    width: 25px;
-    height: 25px;
-    position: absolute;
-    background-color: var(--color-secondary);
-    border-radius: 50px;
-    right: 0px;
-    top: 64px;
-    font-size: 14px;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.top {
+    right: 0px!important;
+    top: 64px!important;
 }
 
 .badge-total-carrinho {
@@ -746,7 +736,7 @@ select.form-control {
     align-items: center;
 }
 
-.botão-carrinho {
+.botao-carrinho {
     position: fixed;
     right: 30px;
     bottom: 50px;
@@ -762,4 +752,27 @@ select.form-control {
     border-radius: 50px;
     cursor: pointer;
     z-index: 1;
+}
+
+.container-mensagem {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    z-index: 9999;
+}
+
+.toast {
+    color: var(--color-white);
+    padding: 10px 25px;
+    font-size: 18px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.toast.red {
+    background-color: var(--color-red);
+}
+
+.toast.green {
+    background-color: var(--color-green);
 }
