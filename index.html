@@ -27,7 +27,7 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg pl-0 pr-0">
                 <a class="navbar-brand" href="#">
-                    <img src="./assets/img/logotipo-menu-delivery.png" width="160" class="img-logo">
+                    <img src="./assets/img/logotipo.png" width="160" class="img-logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown">
                     <span class="navbar-toggler-icon">
@@ -375,11 +375,13 @@
             <div class="row">
 
                 <div class="col-3 container-logo-footer">
-                    <img class="logo-footer" src="./assets/img/logotipo-menu-delivery.png">
+                    <img class="logo-footer" src="./assets/img/logotipo.png">
                 </div>
                 <div class="col-6 container-texto-footer">
                     <p class="mb-0">
-                        <b>Menu Delivery</b> &copy; Todos os direitos reservados.
+                        <b>Menu Delivery</b> &copy; Todos os direitos reservados. <br> <br> Desenvolvido por <a
+                        href="https://api.whatsapp.com/send?phone=5548996899870&text=Ol%C3%A1%20Gustavo%20Miranda!%20Meu%20nome%20%C3%A9%20(seu%20nome%20aqui),%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20a%20cria%C3%A7%C3%A3o%20de%20um%20site!"
+                        target="_blank">Gustavo Miranda</a>.
                     </p>
                 </div>
                 <div class="col-3 container-redes-footer">
@@ -394,14 +396,6 @@
                     </a>
                 </div>
             </div>
-        </div>
-
-        <div>
-            <p class="mt-0 text-center">
-                Desenvolvido por <a
-                    href="https://api.whatsapp.com/send?phone=5548996899870&text=Ol%C3%A1%20Gustavo%20Miranda!%20Meu%20nome%20%C3%A9%20(seu%20nome%20aqui),%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20a%20cria%C3%A7%C3%A3o%20de%20um%20site!"
-                    target="_blank">Gustavo Miranda</a>.
-            </p>
         </div>
 
     </footer>
@@ -621,17 +615,17 @@
 
                 </div>
 
-                <a class="btn btn-yellow float-right" id="btnEtapaPedido">
+                <a onclick="cardapio.metodos.carregarEtapa(2)" class="btn btn-yellow float-right" id="btnEtapaPedido">
                     Continuar
                 </a>
-                <a class="btn btn-yellow float-right hidden" id="btnEtapaEndereço">
+                <a onclick="cardapio.metodos.carregarEtapa(3)" class="btn btn-yellow float-right hidden" id="btnEtapaEndereço">
                     Revisar pedido
                 </a>
                 <a class="btn btn-yellow float-right hidden" id="btnEtapaResumo">
                     Enviar pedido
                 </a>
 
-                <a class="btn btn-white float-right mr-3 hidden" id="btnVoltar">
+                <a onclick="cardapio.metodos.voltarEtapa()" class="btn btn-white float-right mr-3 hidden" id="btnVoltar">
                     Voltar
                 </a>
 

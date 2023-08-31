@@ -479,6 +479,7 @@ footer {
 
 .container-texto-footer {
     justify-content: center;
+    text-align: center!important;
 }
 
 .container-redes-footer {
