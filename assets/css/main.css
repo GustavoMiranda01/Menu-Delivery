@@ -719,7 +719,7 @@ select.form-control {
 
 .top {
     right: 0px!important;
-    top: 64px!important;
+    top: 45px!important;
 }
 
 .badge-total-carrinho {
@@ -776,4 +776,22 @@ select.form-control {
 
 .toast.green {
     background-color: var(--color-green);
+}
+
+.carrinho-vazio {
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.carrinho-vazio i {
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    margin: 0 50px 10px 70px;
 }
