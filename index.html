@@ -437,7 +437,9 @@
                         <div class="form-group container-cep">
                             <label>cep:</label>
                             <input id="txtCep" type="text" class="form-control" />
-                            <a class="btn btn-yellow btn-sm"><i class="fa fa-search"></i></a>
+                            <a class="btn btn-yellow btn-sm" onclick="cardapio.metodos.buscarCep()">
+                                <i class="fa fa-search"></i>
+                            </a>
                         </div>
                     </div>
 
@@ -543,7 +545,7 @@
                                     </p>
                                 </div>
                                 <p class="quantidade-produto-resumo">
-                                    X <b>3</b>
+                                    X <b style="font-size: 27px; color: black;">3</b>
                                 </p>
                             </div>
 
@@ -583,25 +585,25 @@
 
                     <p class="mb-0">
                         <span>Subtotal:</span>
-                        <span id="lblSubTotal">R$ 95,00</span>
+                        <span id="lblSubTotal">R$ 0,00</span>
                     </p>
 
                     <p class="mb-0 texto-entrega">
                         <span><i class="fas fa-motorcycle"></i>&nbsp; Entrega:</span>
-                        <span id="lblValorEntrega"> + R$ 5,00</span>
+                        <span id="lblValorEntrega"> + R$ 0,00</span>
                     </p>
 
                     <p class="mb-0 texto-total">
                         <span><b>Total:</b></span>
-                        <span class="valor-total" id="lblValorTotal"><b>R$ 100,00</b></span>
+                        <span class="valor-total"><b id="lblValorTotal">R$ 0,00</b></span>
                     </p>
 
                 </div>
 
-                <a onclick="cardapio.metodos.carregarEtapa(2)" class="btn btn-yellow float-right" id="btnEtapaPedido">
+                <a onclick="cardapio.metodos.carregarEndereco()" class="btn btn-yellow float-right" id="btnEtapaPedido">
                     Continuar
                 </a>
-                <a onclick="cardapio.metodos.carregarEtapa(3)" class="btn btn-yellow float-right hidden" id="btnEtapaEndereço">
+                <a onclick="cardapio.metodos.resumoPedido()" class="btn btn-yellow float-right hidden" id="btnEtapaEndereço">
                     Revisar pedido
                 </a>
                 <a class="btn btn-yellow float-right hidden" id="btnEtapaResumo">
