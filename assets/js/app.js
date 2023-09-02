@@ -368,7 +368,7 @@ cardapio.metodos = {
 
                         // Atualizar os campos com os valores retornados
                         $("#txtEndereco").val(dados.logradouro);
-                        $("#txtBairro").val(dados.bairro);                        
+                        $("#txtBairro").val(dados.bairro);
                         $("#txtCidade").val(dados.localidade);
                         $("#ddlUf").val(dados.uf);
                         $("#txtNumero").focus();
@@ -398,13 +398,13 @@ cardapio.metodos = {
     // validação antes de proceguir para a etapa 3
     resumoPedido: () => {
 
-        let cep =  $("#txtCep").val().trim();
-        let endereco =  $("#txtEndereco").val().trim();
-        let bairro =  $("#txtBairro").val().trim();
-        let cidade =  $("#txtCidade").val().trim();
-        let uf =  $("#ddlUf").val().trim();
-        let numero =  $("#txtNumero").val().trim();
-        let complemento =  $("#txtComplemento").val().trim();
+        let cep = $("#txtCep").val().trim();
+        let endereco = $("#txtEndereco").val().trim();
+        let bairro = $("#txtBairro").val().trim();
+        let cidade = $("#txtCidade").val().trim();
+        let uf = $("#ddlUf").val().trim();
+        let numero = $("#txtNumero").val().trim();
+        let complemento = $("#txtComplemento").val().trim();
 
         if (cep.length <= 0) {
 
@@ -473,6 +473,28 @@ cardapio.metodos = {
         }
 
         cardapio.metodos.carregarEtapa(3);
+        cardapio.metodos.carregarResumo();
+
+    },
+
+    //carrega a etapa de resumo do pedido
+    carregarResumo: () => {
+
+        $("#listaItensResumo").html('');
+
+        $.each(MEU_CARRINHO, (i, e) => {
+
+            let temp = cardapio.templates.itemResumo.replace(/\${img}/g, e.img)
+                .replace(/\${name}/g, e.name)
+                .replace(/\${price}/g, e.price.toFixed(2).replace('.', ','))
+                .replace(/\${qntd}/g, e.qntd)
+
+            $("#listaItensResumo").append(temp);
+
+        });
+
+        $("#resumoEndereco").html(`${MEU_ENDERECO.endereco}, ${MEU_ENDERECO.numero}, ${MEU_ENDERECO.bairro}`);
+        $("#cidadeEndereco").html(`${MEU_ENDERECO.cidade}-${MEU_ENDERECO.uf} / ${MEU_ENDERECO.cep} ${MEU_ENDERECO.complemento}`);
 
     },
 
@@ -541,6 +563,26 @@ cardapio.templates = {
                 <span class="btn-mais" onclick="cardapio.metodos.aumentarQuantidadeCarrinho('\${id}')"><i class="fas fa-plus"></i></span>
                 <span class="btn btn-remove" onclick="cardapio.metodos.removeItemCarrinho('\${id}')"><i class="fa fa-times"></i></span>
             </div>
+        </div>
+    `,
+
+    itemResumo: `
+        <div class="col-12 item-carrinho resumo">
+            <div class="img-produto-resumo">
+                <img
+                    src="\${img}">
+            </div>
+            <div class="dados-produto">
+                <p class="title-produto-resumo">
+                    <b>\${name}</b>
+                </p>
+                <p class="price-produto-resumo">
+                    <b>R$ \${price}</b>
+                </p>
+            </div>
+            <p class="quantidade-produto-resumo">
+                X <b style="font-size: 27px; color: black;">\${qntd}</b>
+            </p>
         </div>
     `
 }

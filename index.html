@@ -380,8 +380,8 @@
                 <div class="col-6 container-texto-footer">
                     <p class="mb-0">
                         <b>Menu Delivery</b> &copy; Todos os direitos reservados. <br> <br> Desenvolvido por <a
-                        href="https://api.whatsapp.com/send?phone=5548996899870&text=Ol%C3%A1%20Gustavo%20Miranda!%20Meu%20nome%20%C3%A9%20(seu%20nome%20aqui),%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20a%20cria%C3%A7%C3%A3o%20de%20um%20site!"
-                        target="_blank">Gustavo Miranda</a>.
+                            href="https://api.whatsapp.com/send?phone=5548996899870&text=Ol%C3%A1%20Gustavo%20Miranda!%20Meu%20nome%20%C3%A9%20(seu%20nome%20aqui),%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20a%20cria%C3%A7%C3%A3o%20de%20um%20site!"
+                            target="_blank">Gustavo Miranda</a>.
                     </p>
                 </div>
                 <div class="col-3 container-redes-footer">
@@ -531,44 +531,27 @@
                     <div class="col-12">
                         <div class="row" id="listaItensResumo">
 
-                            <div class="col-12 item-carrinho resumo">
-                                <div class="img-produto-resumo">
-                                    <img
-                                        src="./assets/img/cardapio/burguers/burger-au-poivre-kit-4-pack.3ca0e39b02db753304cd185638dad518.jpg">
-                                </div>
-                                <div class="dados-produto">
-                                    <p class="title-produto-resumo">
-                                        <b>Nome do Produto</b>
-                                    </p>
-                                    <p class="price-produto-resumo">
-                                        <b>R$ 100,00</b>
-                                    </p>
-                                </div>
-                                <p class="quantidade-produto-resumo">
-                                    X <b style="font-size: 27px; color: black;">3</b>
-                                </p>
-                            </div>
 
-                            <div class="col-12">
-                                <p class="title-carrinho mt-4">
-                                    <b>Local da entrega:</b>
-                                </p>
-                            </div>
+                        </div>
+                    </div>
 
-                            <div class="col-12 item-carrinho resumo">
-                                <div class="img-map">
-                                    <i class="fas fa-map-marked-alt"></i>
-                                </div>
-                                <div class="dados-produto">
-                                    <p class="texto-endereco">
-                                        <b id="resumoEndereco">Rua teste, 200, bairro teste</b>
-                                    </p>
-                                    <p class="cidade-endereco" id="cidadeEndereco">
-                                        Cidade-SC / 15411-000
-                                    </p>
-                                </div>
-                            </div>
+                    <div class="col-12">
+                        <p class="title-carrinho mt-4">
+                            <b>Local da entrega:</b>
+                        </p>
+                    </div>
 
+                    <div class="col-12 item-carrinho resumo">
+                        <div class="img-map">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <div class="dados-produto">
+                            <p class="texto-endereco">
+                                <b id="resumoEndereco"></b>
+                            </p>
+                            <p class="cidade-endereco" id="cidadeEndereco">
+                                
+                            </p>
                         </div>
                     </div>
 
@@ -603,14 +586,16 @@
                 <a onclick="cardapio.metodos.carregarEndereco()" class="btn btn-yellow float-right" id="btnEtapaPedido">
                     Continuar
                 </a>
-                <a onclick="cardapio.metodos.resumoPedido()" class="btn btn-yellow float-right hidden" id="btnEtapaEndereço">
+                <a onclick="cardapio.metodos.resumoPedido()" class="btn btn-yellow float-right hidden"
+                    id="btnEtapaEndereço">
                     Revisar pedido
                 </a>
                 <a class="btn btn-yellow float-right hidden" id="btnEtapaResumo">
                     Enviar pedido
                 </a>
 
-                <a onclick="cardapio.metodos.voltarEtapa()" class="btn btn-white float-right mr-3 hidden" id="btnVoltar">
+                <a onclick="cardapio.metodos.voltarEtapa()" class="btn btn-white float-right mr-3 hidden"
+                    id="btnVoltar">
                     Voltar
                 </a>
 
