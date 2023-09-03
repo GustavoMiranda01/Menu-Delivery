@@ -71,10 +71,10 @@
                             segura.
                         </p>
                         <div>
-                            <a class="btn btn-yellow mt-4 mr-3">
+                            <a class="btn btn-yellow mt-4 mr-3" href="#cardapio">
                                 Ver cardápio
                             </a>
-                            <a href="#" class="btn btn-white btn-icon-left mt-4">
+                            <a href="#" class="btn btn-white btn-icon-left mt-4" id="btnLigar">
                                 <span class="icon-left">
                                     <i class="fa fa-phone"></i>
                                 </span>
@@ -82,13 +82,13 @@
                             </a>
                         </div>
                     </div>
-                    <a class="btn btn-sm btn-white btn-social mt-4 mr-3">
+                    <a href="#" target="_blank" class="btn btn-sm btn-white btn-social mt-4 mr-3">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a class="btn btn-sm btn-white btn-social mt-4 mr-3">
+                    <a href="#" target="_blank" class="btn btn-sm btn-white btn-social mt-4 mr-3">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a class="btn btn-sm btn-white btn-social mt-4">
+                    <a href="#" target="_blank" class="btn btn-sm btn-white btn-social btn-botao-whatsapp mt-4">
                         <i class="fab fa-whatsapp"></i>
                     </a>
                 </div>
@@ -320,9 +320,9 @@
 
                     </div>
 
-                    <a class="btn btn-sm btn-white btn-social mr-3 active">1</a>
-                    <a class="btn btn-sm btn-white btn-social mr-3">2</a>
-                    <a class="btn btn-sm btn-white btn-social">3</a>
+                    <a id="btnDepoimento-1" class="btn btn-sm btn-white btn-social mr-3 active" onclick="cardapio.metodos.abrirDepoimento(1)">1</a>
+                    <a id="btnDepoimento-2" class="btn btn-sm btn-white btn-social mr-3" onclick="cardapio.metodos.abrirDepoimento(2)">2</a>
+                    <a id="btnDepoimento-3" class="btn btn-sm btn-white btn-social" onclick="cardapio.metodos.abrirDepoimento(3)">3</a>
 
                 </div>
 
@@ -349,7 +349,7 @@
                                     <br>
                                     Reserve sua data e horário de forma simples e rápida.
                                 </p>
-                                <a class="btn btn-yellow mt-4">
+                                <a class="btn btn-yellow mt-4" href="#" id="btnReserva" target="_blank">
                                     Fazer reserva
                                 </a>
                             </div>
@@ -380,18 +380,18 @@
                 <div class="col-6 container-texto-footer">
                     <p class="mb-0">
                         <b>Menu Delivery</b> &copy; Todos os direitos reservados. <br> <br> Desenvolvido por <a
-                            href="https://api.whatsapp.com/send?phone=5548996899870&text=Ol%C3%A1%20Gustavo%20Miranda!%20Meu%20nome%20%C3%A9%20(seu%20nome%20aqui),%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20a%20cria%C3%A7%C3%A3o%20de%20um%20site!"
+                            href="https://wa.me/5548996899870?text=Olá Gustavo Miranda! Meu nome é (seu nome aqui), gostaria de fazer um orçamento para a criação de um site!"
                             target="_blank">Gustavo Miranda</a>.
                     </p>
                 </div>
                 <div class="col-3 container-redes-footer">
-                    <a class="btn btn-sm btn-white btn-social mr-3">
+                    <a href="#" class="btn btn-sm btn-white btn-social mr-3" target="_blank">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a class="btn btn-sm btn-white btn-social mr-3">
+                    <a href="#" class="btn btn-sm btn-white btn-social mr-3" target="_blank">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a class="btn btn-sm btn-white btn-social">
+                    <a href="#" class="btn btn-sm btn-white btn-social btn-botao-whatsapp" target="_blank">
                         <i class="fab fa-whatsapp"></i>
                     </a>
                 </div>
@@ -590,7 +590,7 @@
                     id="btnEtapaEndereço">
                     Revisar pedido
                 </a>
-                <a class="btn btn-yellow float-right hidden" id="btnEtapaResumo">
+                <a href="#" class="btn btn-yellow float-right hidden" id="btnEtapaResumo" target="_blank">
                     Enviar pedido
                 </a>
 
