@@ -2,14 +2,16 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Menu-Delivery</title>
-    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/css/fontawesome.css">
-    <link rel="stylesheet" href="./assets/css/main.css">
-    <link rel="stylesheet" href="./assets/css/animate.css">
-    <link rel="shortcut icon" href="./assets/img/menu-delirery-favicoin.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./assets/css/fontawesome.css"/>
+    <link rel="stylesheet" href="./assets/css/animate.css"/>
+    <link rel="stylesheet" href="./assets/css/main.css"/>
+    <link rel="stylesheet" href="./assets/css/mobile.css"/>
+    <link rel="shortcut icon" href="./assets/img/menu-delirery-favicoin.png" type="image/x-icon"/>
 </head>
 
 <body>
@@ -436,7 +438,7 @@
                     <div class="col-4">
                         <div class="form-group container-cep">
                             <label>cep:</label>
-                            <input id="txtCep" type="text" class="form-control" />
+                            <input id="txtCep" type="text" class="form-control" inputmode="numeric" pattern="[0-9]*" maxlength="8"/>
                             <a class="btn btn-yellow btn-sm" onclick="cardapio.metodos.buscarCep()">
                                 <i class="fa fa-search"></i>
                             </a>
