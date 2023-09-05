@@ -1,5 +1,7 @@
 @media (min-width: 768px) and (max-width: 991px) {}
 
+
+
 @media (max-width: 767px) {
 
     .no-mobile {
@@ -20,11 +22,6 @@
         padding: 20px;
         text-align: center;
         border-radius: 40px;
-    }
-
-    .top {
-        left: 260px;
-        margin-top: 295px;
     }
 
     .navbar-collapse .btn-white {
@@ -183,6 +180,9 @@
         padding: 2px 10px;
     }
 
-
+    
 
 }
+
+
+
