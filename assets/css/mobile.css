@@ -183,7 +183,10 @@
     .modal-full .form-control {
         font-size: 16px;
     }
-
+    
+    .quantidade-produto-resumo {
+        font-size: 16px;
+    }
 
 }
 
