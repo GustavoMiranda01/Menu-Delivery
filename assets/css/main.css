@@ -58,7 +58,7 @@ a.navbar-brand {
     background-color: var(--color-white);
     color: var(--color-black) !important;
     border-radius: 20px;
-    padding: 15px 25px;
+    padding: 9px 24px;
     font-size: 20px;
     box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
@@ -112,7 +112,7 @@ a.navbar-brand {
     background-color: var(--color-primary);
     color: var(--color-white) !important;
     border-radius: 20px;
-    padding: 15px 25px;
+    padding: 9px 24px;
     font-size: 20px;
     box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
@@ -125,11 +125,11 @@ a.navbar-brand {
     display: inline-block;
     color: var(--color-white);
     background-color: var(--color-primary);
-    width: 45px;
-    height: 45px;
+    width: 41px;
+    height: 41px;
     position: inherit;
     margin-left: -60px;
-    margin-bottom: -8px;
+    margin-bottom: -1px;
     border-radius: 15px;
     text-align: center;
     padding-top: 8px;
