@@ -32,6 +32,10 @@
         margin-right: 20px;
     }
 
+    .navbar-collapse .bnt-icon span.icon {
+        display: none;
+    }
+
     .banner {
         padding: 50px 4px 50px;
     }
@@ -183,12 +187,9 @@
     .modal-full .form-control {
         font-size: 16px;
     }
-    
+
     .quantidade-produto-resumo {
         font-size: 16px;
     }
 
 }
-
-
-
